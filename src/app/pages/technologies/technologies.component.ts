@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/services/http.service';
+import { Technology } from 'src/app/models/technology.models';
 
 @Component({
   selector: 'app-technologies',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./technologies.component.css']
 })
 export class TechnologiesComponent implements OnInit {
+  public technologies: Technology[];
 
-  constructor() { }
+  constructor(public _httpService: HttpService) { }
 
   ngOnInit() {
+    this._httpService.getTechnologies().subscribe( (technologies: Technology[]) => {
+      this.technologies = technologies['data'];
+      debugger;
+    });
   }
 
 }

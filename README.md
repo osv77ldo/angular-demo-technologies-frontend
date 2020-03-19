@@ -12,4 +12,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Backend API
 
-In order to run and test the app, please check the backend nodeJs app [Angular CLI README](https://github.com/osv77ldo/nodejs-demo-technologies-backend).
+In order to run and test the app, please check the backend nodeJs app [TechnologiesApp - Backend NodeJS](https://github.com/osv77ldo/nodejs-demo-technologies-backend).

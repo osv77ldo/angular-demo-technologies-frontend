@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TechnologyCardComponent } from './components/technology-card/technology-card.component';
-import { AboutComponent } from './pages/about/about.component';
 import { SearchComponent } from './pages/search/search.component';
 import { TechnologyComponent } from './pages/technology/technology.component';
 import { TechnologiesComponent } from './pages/technologies/technologies.component';
@@ -16,7 +16,6 @@ import { HomeComponent } from './pages/home/home.component';
   declarations: [
     AppComponent,
     TechnologyCardComponent,
-    AboutComponent,
     SearchComponent,
     TechnologyComponent,
     TechnologiesComponent,
@@ -26,7 +25,8 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

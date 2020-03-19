@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Technology } from '../models/technology.models';
+import { Technology } from '../models/technology.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -19,6 +19,6 @@ export class HttpService {
   }
 
   public searchTechnology(query: string){
-    return this._http.get<Technology>(this.baseUrl + '/technology/search/' + query);
+    return this._http.get<Technology[]>(this.baseUrl + '/technology/search/' + query);
   }
 }
